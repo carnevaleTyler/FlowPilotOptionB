@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BubbleChart from "./Components/BubbleChart";
+import NavigationBar from "./Components/NavigationBar";
+import BottomDrawer from "./Components/BottomDrawer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <html>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </head>
+      <body>
+        <NavigationBar />
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <BubbleChart />
+        </div>
+        <BottomDrawer />
+      </body>
+    </html>
   );
-}
+};
 
 export default App;
